@@ -1,0 +1,41 @@
+<div class="part">
+  <div>
+    <input type="checkbox" id="check" ng-model="active" />
+    <label for="check">Show favourite recipes first</label>
+  </div>
+  <p>
+    Favourite recipes:
+    <button class="btn-n">
+      <i style="font-size: 20px" class="fa-solid fa-heart"></i>
+      <span class="badge" id="fav">{{ totalItem }}</span>
+    </button>
+  </p>
+</div>
+
+<div class="container-main">
+  <div class="con">
+    <button class="btn" color="purple" (click)="onClick1()">
+      <div>Main course</div>
+    </button>
+    <button class="btn" color="purple" (click)="onClick()">
+      <div>Side dish</div>
+    </button>
+  </div>
+
+  <div
+    *ngFor="let recipe of recipes | filter : searchK : 'title'; let i = index"
+    class="container-mini"
+  >
+    <h5>
+      <a routerLink="/details/{{ recipe.id }}">{{ recipe.title }}</a>
+    </h5>
+    <img src="{{ recipe.image }}" alt="Recipe image" />
+    <button
+      class="btn-n"
+      (click)="makeFavourite(recipe); favouriteAdded(i)"
+      [ngClass]="active.includes(i) ? 'clicked' : ''"
+    >
+      <i style="font-size: 20px" class="fa-solid fa-heart"></i>
+    </button>
+  </div>
+</div>

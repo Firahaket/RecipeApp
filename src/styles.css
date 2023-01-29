@@ -1,1 +1,95 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 97%;
+  margin: 10px auto;
+  overflow: auto;
+  height: 100%;
+  border: 1px solid steelblue;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.container-mini {
+  width: 31%;
+  margin: 10px 10px;
+  overflow: auto;
+  height: 350px;
+  border: 1px solid steelblue;
+  padding: 10px;
+  border-radius: 5px;
+  float: left;
+}
+
+.container-main {
+  width: 100%;
+  margin: 10px auto;
+  overflow: auto;
+  min-height: 500px;
+  border: 1px solid steelblue;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  background: purple;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  background-color: black;
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.search {
+  max-width: 160px;
+  margin: 4px auto;
+  overflow: auto;
+  min-height: 30px;
+  border: 1px solid steelblue;
+  padding: 1px;
+  border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: purple;
+}
+
+@media only screen and (max-width: 600px) {
+  .container-mini {
+    width: 100%;
+    margin: 10px 10px;
+    overflow: auto;
+    height: 350px;
+    border: 1px solid steelblue;
+    padding: 10px;
+    border-radius: 5px;
+    float: left;
+  }
+}

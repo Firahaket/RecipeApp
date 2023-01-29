@@ -1,6 +1,13 @@
 # RecipeApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+@author: Fikreta Turanovic
+API Key: ac93cf7fc90b454bbaa980662ba28c73
+Note: Througout this project this Api key was used, if you wish to implement it inside your project use your personalized key.
+
+
+RecipeApp is an application which displays random recipes data, data from a specific meal type from https://spoonacular.com/food-api/docs API. It can also search for recipes from the mentioned API.
+
 
 ## Development server
 

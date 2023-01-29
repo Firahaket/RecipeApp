@@ -1,0 +1,9 @@
+<input
+  type="text"
+  placeholder="&#x2315;"
+  [(ngModel)]="searchTerm"
+  [minlength]="3"
+  (keyup)="search($event)"
+  name="search"
+  class="search"
+/>

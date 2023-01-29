@@ -1,0 +1,36 @@
+img {
+    width: 96%;
+    height: 70%;
+    margin-bottom: 15px;
+    transition: 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+img:hover {
+    transition: 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+.btn-n {
+    text-decoration: none;
+    border: none;
+    background-color: white;
+}
+.part{
+    display: flex;
+    justify-content: space-between;
+}
+.badge {
+  background-color: red;
+  color: white;
+  padding: 2px 3px;
+  text-align: center;
+  border-radius: 50px;
+}
+.btn-n {
+    text-decoration: none;
+    border: none;
+    background-color: white;
+}
+.clicked {
+    color:red;
+}

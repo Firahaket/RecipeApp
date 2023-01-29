@@ -1,0 +1,28 @@
+<div class="container-main">
+  <div>
+    <div class="contains">
+      <button type="button" class="btn-n" (click)="goBack()">
+        <i style="font-size: 20px">&#8592;</i>
+      </button>
+      <button
+        class="favourite"
+        (click)="isFavourite()"
+        [ngClass]="{ black: !toggle, red: toggle }"
+      >
+        <i style="font-size: 20px" class="fa-solid fa-heart"></i>
+        <span class="badge"></span>
+      </button>
+    </div>
+    <h3>{{ recipe?.title }}</h3>
+    <img src="{{ recipe?.image }}" alt="Recipe image" />
+    <div>
+      <div [innerHTML]="recipe?.summary | safeHtml">
+        Summary: {{ recipe?.summary }}
+      </div>
+      <h4>Ready in minutes: {{ recipe?.readyInMinutes }}</h4>
+      <h4>Total servings: {{ recipe?.servings }}</h4>
+      <h4>Dish Types:</h4>
+      <div class="tags" *ngFor="let r of recipe?.dishTypes">{{ r }}</div>
+    </div>
+  </div>
+</div>
